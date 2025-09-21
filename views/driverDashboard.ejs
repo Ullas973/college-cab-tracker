@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Logout button top-right -->
+  <button id="driverLogoutBtn">Logout</button>
+
+  <div class="card driver-dashboard">
+    <h1>Driver Dashboard</h1>
+    <div class="coords">
+      <p>Latitude: <span id="lat">null</span></p>
+      <p>Longitude: <span id="lng">null</span></p>
+    </div>
+    <button id="sendLocationBtn">Start Sharing My Location</button>
+    <p id="statusText">Click the button to start sharing your location.</p>
+  </div>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/driver.js"></script>
+
+  <script>
+    // Logout functionality
+    document.getElementById("driverLogoutBtn").addEventListener("click", () => {
+      localStorage.removeItem("driverToken"); // remove JWT if used
+      window.location.href = "/login-driver";  // redirect to login page
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f6f8;
+}
+
+.landing-container {
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.dashboard-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+#map {
+  height: 90vh;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+#noDriverText {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.driver-dashboard {
+  text-align: center;
+  padding: 50px;
+}
+
+.coords p {
+  font-size: 1.2rem;
+}
+
+.login-card input {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.error {
+  color: red;
+}
+/* Top-right red logout button for driver dashboard */
+#driverLogoutBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 14px;
+}
+
+/* Optional hover effect */
+#driverLogoutBtn:hover {
+    background-color: darkred;
+}

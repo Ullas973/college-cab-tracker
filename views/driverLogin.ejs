@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Driver Login - College Cab Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+
+  <div class="w-full max-w-md bg-white shadow-lg rounded-lg p-8">
+
+    <!-- Heading -->
+    <h1 class="text-2xl font-bold text-center mb-6">Driver Login</h1>
+
+    <!-- Driver login form -->
+    <form action="/login-driver" method="POST" class="space-y-4">
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required
+          class="mt-1 w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          required
+          class="mt-1 w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <div>
+        <button 
+          type="submit" 
+          class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
+        >
+          Login
+        </button>
+      </div>
+    </form>
+
+    <!-- Error message if any -->
+    <% if (error) { %>
+      <p class="text-red-500 mt-4 text-center"><%= error %></p>
+    <% } %>
+
+    <!-- Info box for test credentials -->
+    <div class="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400 text-blue-700">
+      <p class="font-semibold">For testing:</p>
+      <p>Email: <span class="font-mono">driver1@college.com</span></p>
+      <p>Password: <span class="font-mono">1234</span></p>
+    </div>
+
+  </div>
+</body>
+</html>
